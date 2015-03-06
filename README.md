@@ -2,9 +2,13 @@
 
 This Docker container provides a MySQL Cluster installation.
 
+The project sources can be found on [GitHub](https://github.com/g17/MySQL-Cluster). The Docker image build is hosted at [Docker Hub](https://registry.hub.docker.com/u/h3nrik/mysql-cluster/).
+
 
 #Build
 
+    git clone https://github.com/g17/MySQL-Cluster.git
+    cd MySQL-Cluster
     docker build -t h3nrik/mysql-cluster .
 
 
