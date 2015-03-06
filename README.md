@@ -68,8 +68,8 @@ Prepare a configuration file for the management node similar to the following on
 
 3. Run the data nodes on host 192.168.0.10 and 192.168.0.11:
 
-        docker run -d --name ndbd01 --net=host -p 192.168.0.10:1186:1186 h3nrik/mysql-cluster ndbd 192.168.0.1
-        docker run -d --name ndbd02 --net=host -p 192.168.0.11:1186:1186 h3nrik/mysql-cluster ndbd 192.168.0.1
+        docker run -d --name ndbd01 --net=host h3nrik/mysql-cluster ndbd 192.168.0.1
+        docker run -d --name ndbd02 --net=host h3nrik/mysql-cluster ndbd 192.168.0.1
 
 
 4. Run the SQL nodes on host 192.168.0.100 and 192.168.0.101:
