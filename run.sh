@@ -15,11 +15,11 @@ MYSQL_MANAGEMENT_PORT=1186
 
 INITIAL=""
 RELOAD="--reload"
-if [ ! -e /.initial ]; then
+if [ ! -e ${MYSQL_CLUSTER_DATA}/.initial ]; then
     echo "First execution detected. Using --initial parameter."
     INITIAL="--initial"
     RELOAD=""
-    touch /.initial
+    touch ${MYSQL_CLUSTER_DATA}/.initial
 else
     echo "Pre-initialized installation detected. Using --reload parameter."
 fi
