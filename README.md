@@ -91,4 +91,4 @@ You can easily update the data/SQL nodes e.g. for up-scaling the cluster:
 
 #Further Ideas
 
-In addition to this setup a MySQL Proxy could be used to access the SQL nodes.
+In addition to this setup a MySQL proxy could be used to access the SQL nodes.
