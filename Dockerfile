@@ -31,9 +31,6 @@ ENV MYSQL_CLUSTER_DATA ${MYSQL_CLUSTER_HOME}/data
 ENV MYSQL_CLUSTER_LOG /var/lib/mysql-cluster
 ENV MYSQL_CLUSTER_CONFIG /etc/mysql-cluster.ini
 
-VOLUME ${MYSQL_CLUSTER_LOG}
-VOLUME ${MYSQL_CLUSTER_DATA}
-
 RUN cd /var/tmp \
     && curl --silent -OL http://dev.mysql.com/get/Downloads/MySQL-Cluster-${MYSQL_CLUSTER_VERSION}/${MYSQL_CLUSTER_ARCHIVE} \
     && mkdir -p ${MYSQL_CLUSTER_HOME} \
@@ -46,6 +43,9 @@ RUN cd /var/tmp \
 
 RUN cd ${MYSQL_CLUSTER_HOME} \
     && ./scripts/mysql_install_db --user=${MYSQL_USER}
+
+VOLUME ${MYSQL_CLUSTER_LOG}
+VOLUME ${MYSQL_CLUSTER_DATA}
 
 
 ####################################################
@@ -64,4 +64,3 @@ ADD run.sh /run.sh
 RUN chmod +x /run.sh
 ENTRYPOINT ["/run.sh"]
 CMD ["ndb_mgm"]
-
