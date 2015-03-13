@@ -34,7 +34,7 @@ elif [ $1 == "ndb_mgmd" ]; then
     ${MYSQL_CLUSTER_BIN}/ndb_mgmd --nodaemon ${RELOAD} ${INITIAL} -f ${MYSQL_CLUSTER_CONFIG} # --no-nodeid-checks --ndb-nodeid=1
 elif [ $1 == "mysqld" ]; then
     echo "Starting mysqld_safe..."
-    ${MYSQL_CLUSTER_BIN}/mysqld_safe --nodaemon --ndbcluster --ledir=${MYSQL_CLUSTER_BIN} --ndb-connectstring=${MYSQL_MANAGEMENT_SERVER} # --skip-grant-tables
+    ${MYSQL_CLUSTER_BIN}/mysqld_safe --ndbcluster --ledir=${MYSQL_CLUSTER_BIN} --ndb-connectstring=${MYSQL_MANAGEMENT_SERVER} # --skip-grant-tables
 else
     echo "Starting ndb_mgm..."
     ${MYSQL_CLUSTER_BIN}/ndb_mgm ${MYSQL_MANAGEMENT_SERVER}
