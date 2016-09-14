@@ -16,7 +16,7 @@ RUN groupadd mysql && useradd -g mysql mysql
 # Installation
 ####################################################
 ENV MYSQL_CLUSTER_VERSION 7.4
-ENV MYSQL_CLUSTER_MICRO_VERSION 12 
+ENV MYSQL_CLUSTER_MICRO_VERSION 12
 ENV MYSQL_CLUSTER_ARCH x86_64
 
 ENV MYSQL_CLUSTER_ARCHIVE_NAME mysql-cluster-gpl-${MYSQL_CLUSTER_VERSION}.${MYSQL_CLUSTER_MICRO_VERSION}-linux-glibc2.5-${MYSQL_CLUSTER_ARCH}
